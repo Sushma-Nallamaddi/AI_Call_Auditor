@@ -90,10 +90,7 @@ pip install ‑r requirements.txt
 4. **Configure Environment Variables**
 Create a .env file at the project root and add your keys:
    GEMINI_API_KEY=your_actual_api_key_here
-# Optional: Email config
-# SENDER_EMAIL=your_email@gmail.com
-# SENDER_PASS=your_app_password
-
+   
 **Usage**
 1. **Start the Application**
    streamlit run app.py
