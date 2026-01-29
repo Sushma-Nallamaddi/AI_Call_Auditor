@@ -30,24 +30,25 @@ Stores all audit results and metadata in a local SQLite database for historical 
 **Policy Management**  
 Enables viewing and updating of active company policy within the interface. The RAG engine re‑indexes updated policies automatically on the next audit run.
 
-AI‑Call‑Auditor/
-├── app.py # Main Streamlit application entry point
-├── requirements.txt # Python dependencies
-├── .env # Environment variables (API keys)
-├── policies/ # Policy document directory
-│ └── company_policy.txt # Default policy document
-├── src/ # Core source modules
-│ ├── audio_processor.py # STT & diarization logic
-│ ├── auditor.py # LLM audit interaction logic
-│ ├── chat_normalizer.py # Chat log parsing logic
-│ ├── database_manager.py # SQLite operations
-│ ├── rag_engine.py # RAG implementation with FAISS
-│ └── reporting.py # PDF generation and alerts
-└── data/ # Generated & persistent data
-├── uploads/ # Uploaded audio and logs
-├── pdf‑reports/ # Generated audit reports
-└── database/ # SQLite database files
+## Project Structure
 
+AI-Call-Auditor/
+├── app.py                  # Main Streamlit application entry point
+├── requirements.txt        # Python dependencies
+├── .env                    # Environment variables (API Keys)
+├── policies/               # Directory for policy documents
+│   └── company_policy.txt  # Default policy text file
+├── src/                    # Source code modules
+│   ├── audio_processor.py  # Audio transcription & diarization logic
+│   ├── auditor.py          # Gemini LLM interaction for auditing
+│   ├── chat_normalizer.py  # Parsing logic for text/chat logs
+│   ├── database_manager.py # SQLite database operations
+│   ├── rag_engine.py       # RAG implementation (FAISS vector store)
+│   └── reporting.py        # PDF generation and Email alerting
+└── data/                   # Generated data (uploads, reports, DBs)
+    ├── uploads/            # Temporary storage for uploaded files
+    ├── pdf-reports/        # Generated PDF reports
+    └── database/           # SQLite database file location
 
 ## Tech Stack
 
@@ -81,6 +82,7 @@ AI‑Call‑Auditor/
    python ‑m venv venv
 # Windows
 venv\Scripts\activate
+
 # Mac/Linux
 source venv/bin/activate
 
@@ -91,7 +93,7 @@ pip install ‑r requirements.txt
 Create a .env file at the project root and add your keys:
    GEMINI_API_KEY=your_actual_api_key_here
    
-**Usage**
+# Usage
 1. **Start the Application**
    streamlit run app.py
 3. **Access the Application**
@@ -110,8 +112,8 @@ Create a .env file at the project root and add your keys:
    *View past audits in the “Audit History” tab
    *Use sidebar options to reset or delete data
 
-**Contributing**
-Contributions are welcome. Please fork the repository and submit a pull request with a clear description of changes.
+# Contributing
+ Contributions are welcome. Please fork the repository and submit a pull request with a clear description of changes.
 
-**License**
-This project is licensed under the MIT License.
+# License
+ This project is licensed under the MIT License.
