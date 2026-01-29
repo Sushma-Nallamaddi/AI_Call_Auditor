@@ -71,51 +71,67 @@ AI-Call-Auditor/
 
 * **Google Gemini API Key:** Obtain from Google AI Studio  
 * **Git:** To clone the repository
-
+  
 ## Installation
 
-1. **Clone the Repository**
+1.  **Clone the Repository**
+    ```bash
+    git clone <repository-url>
+    cd AI-Call-Auditor
+    ```
 
-   ```bash
-   git clone <repository‑url>
-   cd AI‑Call‑Auditor
+2.  **Create a Virtual Environment**
+    ```bash
+    python -m venv venv
+    # Windows
+    venv\Scripts\activate
+    # Mac/Linux
+    source venv/bin/activate
+    ```
 
-2. **Create a Virtual Environment**
-   python ‑m venv venv
-# Windows
-venv\Scripts\activate
+3.  **Install Dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    *Note: This may take a few minutes as it installs PyTorch and other ML libraries.*
 
-# Mac/Linux
-source venv/bin/activate
+4.  **Configure Environment Variables**
+    Create a `.env` file in the root directory and add your keys:
+    ```env
+    GEMINI_API_KEY=your_actual_api_key_here
+    # Optional: Email configurations if you want to enable alerts
+    # SENDER_EMAIL=your_email@gmail.com
+    # SENDER_PASS=your_app_password
+    ```
 
-3. **Install Dependencies**
-pip install ‑r requirements.txt
-
-4. **Configure Environment Variables**
-Create a .env file at the project root and add your keys:
-   GEMINI_API_KEY=your_actual_api_key_here
-   
 # Usage
+
 1. **Start the Application**
    streamlit run app.py
-3. **Access the Application**
+   
+2. **Access the Application**
    Open your browser and go to:
        http://localhost:8501
-5. **Run an Audit**
+   
+3. **Run an Audit**
     * Navigate to the “Run Audit” tab
     * Upload an audio file or chat log
     * Click Start Audit
     * Wait for the processing to complete (Transcription → RAG → Audit → Reporting)
-7. **View Results**
+      
+4. **View Results**
     * Audit scores and compliance status are displayed in the UI
     * Download the detailed PDF report
     * If the score is critical, receive an alert if email config is enabled
-9. **Manage History**
+      
+5. **Manage History**
    *View past audits in the “Audit History” tab
    *Use sidebar options to reset or delete data
 
-# Contributing
- Contributions are welcome. Please fork the repository and submit a pull request with a clear description of changes.
+## Contributing
 
-# License
- This project is licensed under the MIT License.
+Contributions are welcome! Please fork the repository and submit a Pull Request.
+
+## License
+
+[MIT License](LICENSE)
