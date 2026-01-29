@@ -50,6 +50,7 @@ AI-Call-Auditor/
     ├── uploads/            # Temporary storage for uploaded files
     ├── pdf-reports/        # Generated PDF reports
     └── database/           # SQLite database file location
+```
 
 ## Tech Stack
 
