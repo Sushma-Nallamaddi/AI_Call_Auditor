@@ -32,6 +32,7 @@ Enables viewing and updating of active company policy within the interface. The 
 
 ## Project Structure
 
+```
 AI-Call-Auditor/
 ├── app.py                  # Main Streamlit application entry point
 ├── requirements.txt        # Python dependencies
