@@ -8,8 +8,8 @@ from fpdf import FPDF
 class ReportGenerator:
     def __init__(self, output_dir="customer_auditor/data/reports"):
         self.output_dir = output_dir
-        self.sender_email = "hamsajoshua55@gmail.com"
-        self.sender_pass = "myjn fwkq lyjo gopn"
+        self.sender_email = "yourmail@gmail.com"
+        self.sender_pass = "1234 1234 1234 1234"
 
     def generate_pdf(self, audit_data, filename="audit_report.pdf"):
         pdf = FPDF()
